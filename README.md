@@ -375,9 +375,9 @@ Before running this project, make sure you have the following installed on your 
 - Set up environment variables:
 Create  `.env`  file
     
-    You can copy the  `env.sample`  and change its values.
+    You can copy the  `.env.sample`  and change its values.
     ```
-    cp env.sample .env
+    cp .env.sample .env
     ```
 - Make your database:
 Open your terminal,
