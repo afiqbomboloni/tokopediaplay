@@ -4,7 +4,7 @@
 ## Database Structure
 
 **Collection User**
-```json
+```
 [
 	{
 	_id:  "64c219a75eadf975dbe85de2",
@@ -17,7 +17,7 @@
 
 
 **Collection Video**
-```json
+```
 [
 	{
 	_id:  "64c2178d5172e47351801427",
@@ -30,7 +30,7 @@
 
 
 **Collection Product**
-```json
+```
 [
 	{
 	_id:"64c2178c5172e47351801420",
@@ -42,7 +42,7 @@
 ```
 
 **Collection Comment**
-```json
+```
 [
 	{
 	_id:"64c21a7bd3df1d812c9f88ef",
