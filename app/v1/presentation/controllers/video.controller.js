@@ -7,7 +7,8 @@ exports.findAll = async (req, res) => {
     console.log("Success to get data");
     const responseVideos = videos.map(video => ({
       videoId: video.videoId,
-      urlImageThumbnail: video.urlImageThumb
+      urlImageThumbnail: video.urlImageThumb,
+      title: video.title
 
     }));
     console.log(videos._id)

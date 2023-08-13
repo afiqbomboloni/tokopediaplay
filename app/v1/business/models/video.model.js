@@ -14,6 +14,10 @@ module.exports = mongoose => {
                     type: String, 
                     required: true 
                 },
+                title: { 
+                    type: String, 
+                    required: true 
+                },
                 product_id: [{ 
                     type: mongoose.Schema.Types.ObjectId,  
                     ref: 'Product' 

@@ -25,12 +25,6 @@ exports.commentList = async (req, res) => {
       const commentIds = video.comment_id;
       const comments = await commentService.getComments(commentIds);
   
-      if (!comments || comments.length === 0) {
-        return res.status(404).json({
-          message: 'comments not found for this video',
-        });
-      }
-  
       const responseComments = comments.map((comment) => ({
         username: comment.username,
         comment: comment.comment,

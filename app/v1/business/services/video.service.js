@@ -3,7 +3,7 @@ const Video = db.videos;
 
 exports.getAllVideos = async () => {
   try {
-    const projection = { urlImageThumb: 1, videoId: 1 };
+    const projection = { urlImageThumb: 1, videoId: 1, title: 1 };
     const videos = await Video.find({}, projection);
     return videos;
   } catch (error) {

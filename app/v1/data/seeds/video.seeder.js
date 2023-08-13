@@ -22,6 +22,7 @@ const importData = async () => {
       const video1 = new Video({
         videoId: "1vzo4_w8ibo",
         urlImageThumb: "https://img.youtube.com/vi/1vzo4_w8ibo/0.jpg",
+        title: "Kahf testimonial",
         product_id: [product2Id], 
         comment: [],
       });

@@ -5,11 +5,6 @@ module.exports = mongoose => {
         "product",
         mongoose.Schema(
             {
-                // productId: { 
-                //     type: String, 
-                //     required: true, 
-                //     unique: true 
-                // }, 
                 linkProduct: { 
                     type: String, 
                     required: true 
