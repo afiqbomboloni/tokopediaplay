@@ -12,13 +12,17 @@ module.exports = app => {
 
     router.post('/login', auth.login);
 
+    router.get('/username', auth.getUsername);
+
     router.get("/channels", videos.findAll);
+
+    router.get("/video/:id", videos.findOne);
 
     router.get('/channel', products.productList);
 
     router.get('/channels/comments', comments.commentList);
 
-    router.post('/channels/comments', isLoggedIn, comments.submitComment);
+    router.post('/channels/comments', comments.submitComment);
 
     router.get('/search', products.searchProductByTitle);
 

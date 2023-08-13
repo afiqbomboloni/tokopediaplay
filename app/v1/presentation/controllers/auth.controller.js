@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt');
 const userService = require('../../business/services/user.service');
+const jwt = require('jsonwebtoken')
 
+// controller for handling 
 exports.register = (req, res) => {
     const {username,password,avatar} = req.body;
 
@@ -43,8 +45,22 @@ exports.login = (req, res) => {
                 }
 
                 req.session.userId = user._id;
-                return res.status(200).json({message:"login success"});
+
+                const token = jwt.sign({ userId: user._id }, 'secretKey', { expiresIn: '1h' });
+                
+                return res.status(200).json({message:"login success", token:token});
             });
+        })
+        .catch(error => {
+            console.log(error);
+            return res.status(500).json({message:"error"})
+        })
+}
+
+exports.getUsername = (req, res) => {
+    userService.getUsername()
+        .then(user => {
+            return res.status(200).json({user})
         })
         .catch(error => {
             console.log(error);

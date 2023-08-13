@@ -8,8 +8,10 @@ const db = require("./app/v1/business/models");
 const connectDb = require('./app/v1/data/connections/db.connection');
 const configs = require('./app/config/config' )
 
+// this for dotenv
 dotenv.config();
 
+// function for handling cors
 let corsOptions = {
     origin: configs.cors
 };
@@ -20,8 +22,10 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended: true}));
 
+// function for connect to database
 connectDb();
 
+// for handling session
 app.use(session({
     secret: 'secret-key',
     resave: false,

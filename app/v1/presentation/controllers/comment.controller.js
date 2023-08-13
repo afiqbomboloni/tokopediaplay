@@ -3,7 +3,7 @@ const Comment = db.comments;
 const commentService = require("../../business/services/comment.service");
 const videoService = require('../../business/services/video.service');
 
-
+// controller for handling fetch all comments
 exports.commentList = async (req, res) => {
     const { videoId } = req.query;
   
@@ -47,7 +47,7 @@ exports.commentList = async (req, res) => {
     }
   };
   
-
+// controller for handling submit comment
 exports.submitComment = (req, res) => {
     const {videoId, username, comment} = req.body;
 

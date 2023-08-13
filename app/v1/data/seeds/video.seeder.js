@@ -9,20 +9,20 @@ connectDB();
 
 const importData = async () => {
     try {
-      const product1 = new Product({
-        productId: "prod001",
-        linkProduct: "http://example.com/product1",
-        title: "Product 1",
-        price: 100,
+      const product2 = new Product({
+        productId: "prod002",
+        linkProduct: "https://www.tokopedia.com/kahfofficial/kahf-true-brotherhood-eau-de-toilette-35-ml?extParam=whid%3D9930759",
+        title: "Kahf Facial Wash",
+        price: 80000,
       });
-      await product1.save();
+      await product2.save();
   
-      const product1Id = product1._id;
+      const product2Id = product2._id;
   
       const video1 = new Video({
-        // videoId: "20303",
-        urlImageThumb: "http://detik.com/images",
-        product_id: [product1Id], 
+        videoId: "1vzo4_w8ibo",
+        urlImageThumb: "https://img.youtube.com/vi/1vzo4_w8ibo/0.jpg",
+        product_id: [product2Id], 
         comment: [],
       });
       await video1.save();

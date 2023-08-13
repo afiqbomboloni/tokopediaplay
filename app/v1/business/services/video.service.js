@@ -3,7 +3,7 @@ const Video = db.videos;
 
 exports.getAllVideos = async () => {
   try {
-    const projection = { urlImageThumb: 1, _id: 1 };
+    const projection = { urlImageThumb: 1, videoId: 1 };
     const videos = await Video.find({}, projection);
     return videos;
   } catch (error) {
@@ -13,7 +13,7 @@ exports.getAllVideos = async () => {
 
 exports.getVideo = async (videoId) => {
   try {
-    const video = await Video.findOne({_id: videoId})
+    const video = await Video.findOne({videoId: videoId})
     console.log(video)
     if (!video) {
       throw new Error("Video not found");
@@ -27,7 +27,7 @@ exports.getVideo = async (videoId) => {
 
 exports.pushCommentId = async (videoId, commentId) => {
   try {
-    const video = await Video.findById(videoId);
+    const video = await Video.findOne({videoId: videoId});
     video.comment_id.push(commentId);
     await video.save();
   } catch (error) {

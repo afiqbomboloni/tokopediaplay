@@ -25,6 +25,16 @@ exports.getUser = async (username) => {
     
 }
 
+exports.getUsername = async () => {
+    try {
+        const user = await User.findOne({username:"james31"});
+        return user;
+    } catch (error) {
+        throw new Error("error when get user");
+    }
+    
+}
+
 exports.createUser = async (username, password, avatar) => {
     try {
         const newUser = new User({

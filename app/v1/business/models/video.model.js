@@ -5,11 +5,11 @@ module.exports = mongoose => {
         "video",
         mongoose.Schema(
             {
-                // videoId: { 
-                //     type: String, 
-                //     required: true, 
-                //     unique: true 
-                // }, 
+                videoId: { 
+                    type: String, 
+                    required: true, 
+                    unique: true 
+                }, 
                 urlImageThumb: { 
                     type: String, 
                     required: true 
