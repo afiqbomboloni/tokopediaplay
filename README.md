@@ -65,6 +65,7 @@
         - video.model.js
         - product.model.js
         - comment.model.js
+        - index.js
         - user.model.js
        - services/
 	      - video.service.js
@@ -73,10 +74,8 @@
 	      - user.service.js
     - data/
         - seeds/
-          - videos.js
-          - products.js
-          - comments.js
-          - users.js
+          - video.seeder.js
+          - product.seeder.js
         - connections/
           - db.connection.js
     - presentation/
