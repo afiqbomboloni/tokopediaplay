@@ -12,8 +12,6 @@ module.exports = app => {
 
     router.post('/login', auth.login);
 
-    router.get('/username', auth.getUsername);
-
     router.get("/channels", videos.findAll);
 
     router.get("/video/:id", videos.findOne);
