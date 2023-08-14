@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "products:import": "node app/v1/data/seeds/product.seeder",
     "products:destroy": "node app/v1/data/seeds/product.seeder -d",
     "videos:import": "node app/v1/data/seeds/video.seeder",
