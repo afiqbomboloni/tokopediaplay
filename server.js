@@ -12,11 +12,7 @@ const configs = require('./app/config/config' )
 dotenv.config();
 
 // function for handling cors
-let corsOptions = {
-    origin: configs.cors
-};
-
-app.use(cors(corsOptions));
+app.use(cors())
 
 app.use(express.json());
 
